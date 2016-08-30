@@ -117,12 +117,13 @@ Show details about a specific Cask:
 ```bash
 $ brew cask info caffeine
 caffeine: 1.1.1
-Caffeine
 http://lightheadsw.com/caffeine/
 Not installed
-https://github.com/caskroom/homebrew-cask/blob/master/Casks/caffeine.rb
-==> Contents
-  Caffeine.app (app)
+From: https://github.com/caskroom/homebrew-cask/blob/master/Casks/caffeine.rb
+==> Name
+Caffeine
+==> Artifacts
+Caffeine.app (app)
 ```
 
 ## Updating/Upgrading Casks
@@ -180,8 +181,6 @@ Default is `~/Library/PreferencePanes`
 Default is `~/Library/QuickLook`
 * `--fontdir=/my/path` changes the path for Fonts.
 Default is `~/Library/Fonts`
-* `--binarydir=/my/path` changes the path for Binary symlinks.
-Default is `/usr/local/bin`
 * `--input_methoddir=/my/path` changes the path for Input Methods.
 Default is `~/Library/Input Methods`
 * `--screen_saverdir=/my/path` changes the path for Screen Savers.

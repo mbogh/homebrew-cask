@@ -1,13 +1,13 @@
 cask 'docker' do
-  version '1.12.0.9996'
-  sha256 '7ac7c061b135f821fac39e53f7b74233dcaf8f926e4c6d28031acc8717b85107'
+  version '1.12.0.11213'
+  sha256 'c6ec6c637efa347427e86168c8d963deb5770b1d67a99f64096c1554b635bd8b'
 
-  url "https://download.docker.com/mac/beta/#{version}/Docker.dmg"
-  appcast 'https://download.docker.com/mac/beta/appcast.xml',
-          checkpoint: 'd0c1276909ef816d6fee039c1aa4a5584c1bea4354ad6d5607f9a4e600304c94'
+  url "https://download.docker.com/mac/stable/#{version}/Docker.dmg"
+  appcast 'https://download.docker.com/mac/stable/appcast.xml',
+          checkpoint: '0fb1705e17e1946681c0ac6f2ebe60ae8316990dacff8822ade2fd95153a7a09'
   name 'Docker for Mac'
   homepage 'https://www.docker.com/products/docker'
-  license :mit
+  license :gratis
 
   auto_updates true
 

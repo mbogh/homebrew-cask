@@ -1,5 +1,5 @@
 cask 'launchpad-manager-yosemite' do
-  if MacOS.release <= :mavericks
+  if MacOS.version <= :mavericks
     version :latest
     sha256 :no_check
 
@@ -20,4 +20,6 @@ cask 'launchpad-manager-yosemite' do
   name 'Launchpad Manager'
   homepage 'http://launchpadmanager.com/'
   license :commercial
+  
+  zap delete: '~/Library/Application Support/Launchpad Manager'
 end

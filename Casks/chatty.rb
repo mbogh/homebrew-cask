@@ -10,7 +10,12 @@ cask 'chatty' do
   homepage 'https://chatty.github.io'
   license :mit
 
-  app 'Chatty.jar'
+  suite 'Chatty'
+
+  preflight do
+    # There is no sub-folder in the ZIP; the root *is* the folder
+    FileUtils.mv(staged_path.children, staged_path.join('Chatty').tap(&:mkpath))
+  end
 
   zap delete: '~/.chatty'
 

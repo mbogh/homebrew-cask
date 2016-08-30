@@ -13,6 +13,10 @@ cask 'macdown' do
   app 'MacDown.app'
   binary "#{appdir}/MacDown.app/Contents/SharedSupport/bin/macdown"
 
-  zap delete: ['~/Library/Preferences/com.uranusjr.macdown.plist',
-               '~/Library/Application Support/MacDown']
+  zap delete: [
+                '~/Library/Caches/com.uranusjr.macdown',
+                '~/Library/Preferences/com.uranusjr.macdown.plist',
+                '~/Library/Preferences/com.uranusjr.macdown.LSSharedFileList.plist',
+                '~/Library/Application Support/MacDown',
+              ]
 end

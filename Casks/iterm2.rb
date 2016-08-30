@@ -1,11 +1,11 @@
 cask 'iterm2' do
   # note: "2" is not a version number, but an intrinsic part of the product name
-  version '3.0.4'
-  sha256 '0cb3dc26a47ea7f76ac43156ff1c88163726c13154d695b254161a91ce948ad6'
+  version '3.0.7'
+  sha256 'd4fae6dd9e7f3173791bd7b56bc4fd3520fb197a374776833735e0f95fd6fa20'
 
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
   appcast 'https://iterm2.com/appcasts/final.xml',
-          checkpoint: '6f840c00431993ab1151c01facfd8d4dfbb13a94589657a6cb5d72505db3f448'
+          checkpoint: 'ba790936398cff0b7f9a22605dc424df608a632f322a45148070026a9b4db18b'
   name 'iTerm2'
   homepage 'https://www.iterm2.com/'
   license :gpl
@@ -16,5 +16,9 @@ cask 'iterm2' do
 
   app 'iTerm.app'
 
-  zap delete: '~/Library/Preferences/com.googlecode.iterm2.plist'
+  zap delete: [
+                '~/Library/Preferences/com.googlecode.iterm2.plist',
+                '~/Library/Caches/com.googlecode.iterm2',
+                '~/Library/Application Support/iTerm',
+              ]
 end
